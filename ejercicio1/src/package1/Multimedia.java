@@ -1,11 +1,11 @@
 package package1;
 
-public class Multimedia {
+public abstract class Multimedia {
 //attributes
-	private String title;
-	private String author;
-	private String format;
-	private double duration;
+	protected String title;
+	protected String author;
+	protected String format;
+	protected double duration;
 	
 		//Constructor
 	public Multimedia(String title, String author, String format, double duration) {
