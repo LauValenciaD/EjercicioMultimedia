@@ -1,21 +1,29 @@
 package package1;
 
 public class Disco extends Multimedia{
-private String Genre;
+private String genre;
 //contructor
+
 public Disco(String title, String author, String format, double duration, String genre) {
 	super(title, author, format, duration);
-	Genre = genre;
+	this.genre = genre;
 }
+//setters and getters
 public String getGenre() {
-	return Genre;
+	return genre;
 }
+
 public void setGenre(String genre) {
-	Genre = genre;
+	this.genre = genre;
 }
-@Override
-public String toString() {
-	return "Disco [Genre=" + Genre + "]";
+public static boolean validaDisco (String genero)
+{
+	if (genero.equals("") || genero == null)
+	{
+		System.out.println("El género no puede ser nulo o estar en blanco.");
+		return false;
+	}
+	else {return true;}
 }
 
 

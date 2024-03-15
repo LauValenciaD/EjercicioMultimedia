@@ -1,37 +1,49 @@
 package package1;
 
 public class Pelicula extends Multimedia{
-	private String MainActor;
-	private String MainActress;
+	private String mainActor;
+	private String mainActress;
+	
 	
 	
 	//constructor
 	public Pelicula(String title, String author, String format, double duration, String mainActor, String mainActress) {
 		super(title, author, format, duration);
-		setMainActor(mainActor);
-		setMainActress(mainActress);
+		this.mainActor = mainActor;
+		this.mainActress = mainActress;
 	}
 
-//getter and setter
-	public String getMainActress() {
-		return MainActress;
-	}
-
-
-	public void setMainActress(String mainActress) {
-		MainActress = mainActress;
-	}
-
+	//getter and setter
 
 	public String getMainActor() {
-		return MainActor;
+		return mainActor;
 	}
+
+
 
 
 	public void setMainActor(String mainActor) {
-		MainActor = mainActor;
+		this.mainActor = mainActor;
 	}
-	
+
+
+
+
+	public String getMainActress() {
+		return mainActress;
+	}
+
+
+
+
+	public void setMainActress(String mainActress) {
+		this.mainActress = mainActress;
+	}
+
+	@Override
+	public String toString() {
+		return "Pelicula [mainActor=" + mainActor + ", mainActress=" + mainActress + "]";
+	}
 
 	
 

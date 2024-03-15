@@ -7,4 +7,10 @@ public class Video extends Multimedia{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "Video [title=" + title + ", author=" + author + ", format=" + format + ", duration=" + duration + "]";
+	}
+	
+
 }

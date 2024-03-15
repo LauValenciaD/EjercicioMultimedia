@@ -9,16 +9,11 @@ public abstract class Multimedia {
 	
 		//Constructor
 	public Multimedia(String title, String author, String format, double duration) {
-		if (title == null || author == null || format == null || duration <= 0 || duration > 100 ||
-                (!format.equals("wav") && !format.equals("mp3") && !format.equals("avi") && !format.equals("dvd"))) {
-            System.out.println("Error: Los atributos no pueden ser nulos, la duración debe estar en el intervalo (0,100] y el formato debe ser wav, mp3, avi o dvd");
-        } else {
-		
+
 		this.title = title;
 		this.author = author;
 		this.format = format;
 		this.duration = duration;
-	}
 	}
 	//Getters and setters
 
@@ -60,8 +55,15 @@ public abstract class Multimedia {
 		return "Multimedia [title=" + title + ", author=" + author + ", format=" + format + ", duration=" + duration
 				+ "]";
 	}
-	
-	
-
+	//validador
+	public static boolean validador (String title, String author, String format, double duration)
+	{
+		if (title == null || title.equals("")|| author.equals("") || author == null || format == null || format.equals("")|| duration <= 0 || duration > 100 ||
+                (!format.equals("wav") && !format.equals("mp3") && !format.equals("avi") && !format.equals("dvd"))) {
+            System.out.println("Error: Los atributos no pueden ser nulos, la duración debe estar en el intervalo (0-100) y el formato debe ser wav, mp3, avi o dvd");
+            return false; }
+		else { 
+					return true;}
+	}
 
 }
