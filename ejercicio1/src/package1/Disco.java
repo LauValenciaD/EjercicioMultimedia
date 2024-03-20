@@ -25,6 +25,11 @@ public static boolean validaDisco (String genero)
 	}
 	else {return true;}
 }
+@Override
+public String toString() {
+	return "Disco [genre=" + genre + ", title=" + title + ", author=" + author + ", format=" + format + ", duration="
+			+ duration + "]";
+}
 
 
 

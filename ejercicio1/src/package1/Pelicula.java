@@ -42,9 +42,11 @@ public class Pelicula extends Multimedia{
 
 	@Override
 	public String toString() {
-		return "Pelicula [mainActor=" + mainActor + ", mainActress=" + mainActress + "]";
+		return "Pelicula [mainActor=" + mainActor + ", mainActress=" + mainActress + ", title=" + title + ", author="
+				+ author + ", format=" + format + ", duration=" + duration + "]";
 	}
 
+	
 	
 
 }

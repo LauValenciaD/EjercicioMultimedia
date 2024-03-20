@@ -65,5 +65,41 @@ public abstract class Multimedia {
 		else { 
 					return true;}
 	}
+	public static boolean validarTitle(String title) {
+        if (title == null || title.equals("")) {
+            System.out.println("Error: El título no puede ser nulo ni vacío");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static boolean validarAuthor(String author) {
+        if (author == null || author.equals("")) {
+            System.out.println("Error: El autor no puede ser nulo ni vacío");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static boolean validarFormat(String format) {
+        if (format == null || format.equals("") ||
+            (!format.equals("wav") && !format.equals("mp3") && !format.equals("avi") && !format.equals("dvd"))) {
+            System.out.println("Error: El formato debe ser wav, mp3, avi o dvd");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static boolean validarDuration(double duration) {
+        if (duration <= 0 || duration > 100) {
+            System.out.println("Error: La duración debe estar en el intervalo (0-100)");
+            return false;
+        } else {
+            return true;
+        }
+    }
 
 }
